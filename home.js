@@ -7,11 +7,20 @@ $(document).ready(function(){
         $("#popupOverlay").fadeIn();
         $("#signUpForm").fadeIn();
     });
-
+    $(".headerContent .hamburger i").click(function () {
+        if ($(this).text() === "menu") {
+            $("nav").show();
+            $(this).text("close").removeClass("OpenMenu").addClass("closeMenu");
+        } else {
+            $("nav").hide();
+            $(this).text("menu").removeClass("closeMenu").addClass("OpenMenu");
+        }
+    });
     $("#popupOverlay").click(function(){
         $("#popupOverlay").fadeOut(); 
         $("#signUpForm").fadeOut(); 
     });
+
     $("#signUpForm #signUp").click(function(){
         var mDiv = $("#signUpForm");
         var firstName = mDiv.find("input[name='firstName']").val();
