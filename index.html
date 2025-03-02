@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Page with Header and Footer</title>
+    <title>website</title>
     <link rel="stylesheet" href="css/home.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
+    <div class="popup-overlay" id="popupOverlay"></div>
     <header>
         <div class="headerContent">
             <h1>FOSCO</h1>
@@ -22,7 +25,35 @@
             </nav>
         </div>
     </header>
-
+    <div id="signUpForm">
+        <h2 class>Create an Account</h2>
+        <form action="#" method="POST">
+            <ul>
+                <li>
+                    <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+                </li>
+                <li>
+                    <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+                </li>
+                <li>
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                </li>
+                <li>
+                    <input type="password" id="password" name="password" placeholder="Password" required>
+                </li>
+                <li>
+                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required>
+                </li>
+                <li>
+                    <button type="submit" id="signUp">Sign Up</button>
+                </li>
+            </ul>
+        </form>
+        <p>
+            Already have an account? 
+            <a href="#">Login here</a>
+        </p>
+    </div>
     <section class="banner-container">
         <div class="banner-Images">
             <div class="image1"><img src="images\image 2 28 .png"></div>
@@ -113,5 +144,6 @@
         </div>
         <p>copyright @2022</p>
     </footer>
+    <script src="home.js"></script>
 </body>
 </html>
